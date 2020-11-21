@@ -34,6 +34,9 @@ client.on("message", (msg) => {
       msg.channel.send("Si el link al canal que te dio el monitor no funciona, puedes entrar directamente al canal de voz de tu monitor asignado. Dicho canal lo encuentras en la parte izquierda, busca su nombre y da click en él. Si sigues teniendo problemas espera que un monitor te asista.");
      
     }
+    else {
+      
+    }
   }
 
 });
