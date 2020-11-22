@@ -30,7 +30,7 @@ client.on("message", (msg) => {
   
     else if (msg.content.includes("subir")) {
       msg.reply("En Moodle hay un enlace o tarea donde puedes subir tu texto/video para retroalimentación. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el enlace en esos horarios significa que ya alcanzamos el tope diario que podemos revisar.").then(ms => {
-        ms.delete(120000)
+        ms.delete({timeout: 12000})
       })
       .catch(); /*Used for error handling*/
       
