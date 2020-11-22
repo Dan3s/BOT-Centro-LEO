@@ -18,7 +18,7 @@ client.on("ready", () => {
 
 client.on("message", (msg) => {
 
-  if(msg.member.roles.cache.some(r=>["Admin"].includes(r.name))){
+  if(msg.member.roles.cache.some(r=>["Estudiante"].includes(r.name))){
 
     if (msg.content.includes("llegado")) {
       msg.reply("si te refieres a por qué no te ha llegado tu texto retroalimentado, recuerda que te llegará a tu correo en horas de la tarde. A veces tenemos mucho trabajo y tardamos un poquito más :(").then(ms => {
