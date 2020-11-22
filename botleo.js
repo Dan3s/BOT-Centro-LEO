@@ -36,7 +36,7 @@ client.on("message", (msg) => {
       
     }
 
-    else if (msg.content.includes("link") && (!msg.content.includes("Moodle") || !msg.content.includes("moodle"))) {
+    else if (msg.content.includes("link") && !(msg.content.includes("Moodle") || msg.content.includes("moodle"))) {
       msg.channel.send("Si el link al canal que te dio el monitor no funciona, puedes entrar directamente al canal de voz de tu monitor asignado. Dicho canal lo encuentras en la parte izquierda, busca su nombre y da click en él. Si sigues teniendo problemas espera que un monitor te asista.").then(msg => {
         msg.delete(120000)
       })
