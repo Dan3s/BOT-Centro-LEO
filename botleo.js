@@ -44,7 +44,7 @@ client.on("message", (msg) => {
      
     }
 
-    else if (msg.content.includes("solicitar cita") || msg.content.includes("solicitar una cita") || msg.content.includes("agendar una cita") || msg.content.includes("agendar cita") || msg.content.includes("solicitar una monitoria") || msg.content.includes("solicitar una monitora") || msg.content.includes("solicitar una monitoría")) {
+    else if (msg.content.includes("pedir una cita") || msg.content.includes("pedir cita") || msg.content.includes("solicitar cita") || msg.content.includes("solicitar una cita") || msg.content.includes("agendar una cita") || msg.content.includes("agendar cita") || msg.content.includes("solicitar una monitoria") || msg.content.includes("solicitar una monitora") || msg.content.includes("solicitar una monitoría")) {
       msg.reply("Para agilizar el agendamiento de citas recuerda escribir: \n**1. **Su nombre y apellido (por si no es claro en tu nickname). \n**2.** Uno o varios horarios que les puedan servir (los horarios están en #horarios). \n**3. **El motivo de la cita (revisar un ensayo, ayuda en oralidad, etc.). \n**4. **Si quieren con un monitor en especifico (esta es opcional).\n**5. **La materia. \nEn los horarios de atención un monitor leerá tu mensaje y te confirmará si quedaste agendado. Este mensaje se autodestruirá en 2 minutos...").then(ms => {
         ms.delete({timeout: 120000})
       })
