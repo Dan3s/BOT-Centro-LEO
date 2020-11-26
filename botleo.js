@@ -29,14 +29,14 @@ client.on("message", (msg) => {
     }
   
     else if (msg.content.includes("subir")) {
-      msg.reply("si te refieres a cómo subir un texto en Moodle hay un enlace o tarea donde puedes subir tu texto/video para retroalimentación. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el enlace en esos horarios significa que ya alcanzamos el tope diario que podemos revisar.").then(ms => {
+      msg.reply("si te refieres a cómo subir un texto, en Moodle hay un enlace o tarea donde puedes subir tu texto/video para retroalimentación. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el enlace en esos horarios significa que ya alcanzamos el tope diario que podemos revisar.").then(ms => {
         ms.delete({timeout: 120000})
       })
       .catch(); /*Used for error handling*/
       
     }
 
-    else if (msg.content.includes("link") && !(msg.content.includes("Moodle") || msg.content.includes("moodle"))) {
+    else if (msg.content.includes("para entrar") || msg.content.includes("deja entrar") ||  msg.content.includes("puedo entrar") || msg.content.includes("como entrar") || msg.content.includes("entrar al") || msg.content.includes("entrar a") || msg.content.includes("meterme") || msg.content.includes("link") && !(msg.content.includes("Moodle") || msg.content.includes("moodle"))) {
       msg.reply("si el link al canal que te dio el monitor no funciona, puedes entrar directamente al canal de voz de tu monitor asignado. Dicho canal lo encuentras en la parte izquierda, busca su nombre y da click en él. Si sigues teniendo problemas espera que un monitor te asista.").then(ms => {
         ms.delete({timeout: 120000})
       })
