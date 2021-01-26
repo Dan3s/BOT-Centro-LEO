@@ -12,7 +12,7 @@ function presence(){
 }
 
 client.on("ready", () => {
-  console.log("¡Asistente del Centro LEO en servicio!");
+  console.log("Asistente del Centro LEO en servicio");
   presence();
 });
 
