@@ -29,7 +29,7 @@ client.on("message", (msg) => {
     }
   
     else if (msg.content.includes("subir")) {
-      msg.reply("si te refieres a cómo subir un texto, en Moodle hay un enlace o tarea donde puedes subir tu texto/video para retroalimentación. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el enlace en esos horarios significa que ya alcanzamos el tope diario que podemos revisar.").then(ms => {
+      msg.reply("si te refieres a cómo subir un texto o recurso de oralidad, en el canal #📤subir-archivo encontrarás un link a un formulario de Google para hacerlo. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el canal en esos horarios significa que ya alcanzamos el tope diario que podemos revisar.").then(ms => {
         ms.delete({timeout: 120000})
       })
       .catch(); //Used for error handling
@@ -45,7 +45,7 @@ client.on("message", (msg) => {
     }
 
     else if (msg.content.includes("pedir una cita") || msg.content.includes("pedir cita") || msg.content.includes("solicitar cita") || msg.content.includes("solicitar una cita") || msg.content.includes("agendar una cita") || msg.content.includes("agendar cita") || msg.content.includes("solicitar una monitoria") || msg.content.includes("solicitar una monitora") || msg.content.includes("solicitar una monitoría")) {
-      msg.reply("Para agilizar el agendamiento de citas recuerda escribir: \n**1. **Su nombre y apellido (por si no es claro en tu nickname). \n**2.** Uno o varios horarios que les puedan servir (los horarios están en #horarios). \n**3. **El motivo de la cita (revisar un ensayo, ayuda en oralidad, etc.). \n**4. **Si quieren con un monitor en especifico (esta es opcional).\n**5. **La materia. \nEn los horarios de atención un monitor leerá tu mensaje y te confirmará si quedaste agendado. Este mensaje se autodestruirá en 2 minutos...").then(ms => {
+      msg.reply("Para agilizar el agendamiento de citas recuerda escribir: \n**1. **Su nombre y apellido (por si no es claro en tu nickname). \n**2.** Código estudiantil. \n**3. **Número de WhatsApp (opcional, por si debemos comunicarnos contigo). \n**4. **Curso/materia. \n**5. **Uno o varios horarios (día y hora) que te puedan servir. (Los horarios están en #⏰horarios). .\n**6. **Descripción breve de la necesidad (ayuda en un ensayo, presentación oral). .\n**7. **Monitor (opcional). \nEn los horarios de atención un monitor leerá tu mensaje y te confirmará si quedaste agendado. **Recuerda que debes haber sido confirmado por parte del monitor que te agende.** Este mensaje se autodestruirá en 2 minutos...").then(ms => {
         ms.delete({timeout: 120000})
       })
       .catch(); //Used for error handling
