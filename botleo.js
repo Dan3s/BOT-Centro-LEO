@@ -27,9 +27,17 @@ client.on("message", (msg) => {
       .catch(); //Used for error handling
       
     }
-  
+
+    else if (msg.content.includes("llegado")) {
+      msg.reply("").then(ms => {
+        ms.delete({timeout: 120000})
+      })
+      .catch(); //Used for error handling
+      
+    }
+ 
     else if (msg.content.includes("subir")) {
-      msg.reply("si te refieres a cómo subir un texto o recurso de oralidad, en el canal #📤subir-archivo encontrarás un link a un formulario de Google para hacerlo. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el canal en esos horarios significa que ya alcanzamos el tope diario que podemos revisar.").then(ms => {
+      msg.reply("si te refieres a cómo subir un texto o recurso de oralidad, en el canal #📤subir-archivo encontrarás un link a un formulario de Google para hacerlo. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el canal en esos horarios significa que ya alcanzamos el tope diario que podemos revisar. Te agradecemos visitarnos mañana.").then(ms => {
         ms.delete({timeout: 120000})
       })
       .catch(); //Used for error handling
@@ -45,7 +53,7 @@ client.on("message", (msg) => {
     }
 
     else if (msg.content.includes("pedir una cita") || msg.content.includes("pedir cita") || msg.content.includes("solicitar cita") || msg.content.includes("solicitar una cita") || msg.content.includes("agendar una cita") || msg.content.includes("agendar cita") || msg.content.includes("solicitar una monitoria") || msg.content.includes("solicitar una monitora") || msg.content.includes("solicitar una monitoría")) {
-      msg.reply("Para agilizar el agendamiento de citas recuerda escribir: \n**1. **Su nombre y apellido (por si no es claro en tu nickname). \n**2.** Código estudiantil. \n**3. **Número de WhatsApp (opcional, por si debemos comunicarnos contigo). \n**4. **Curso/materia. \n**5. **Uno o varios horarios (día y hora) que te puedan servir. (Los horarios están en #⏰horarios). .\n**6. **Descripción breve de la necesidad (ayuda en un ensayo, presentación oral). .\n**7. **Monitor (opcional). \nEn los horarios de atención un monitor leerá tu mensaje y te confirmará si quedaste agendado. **Recuerda que debes haber sido confirmado por parte del monitor que te agende.** Este mensaje se autodestruirá en 2 minutos...").then(ms => {
+      msg.reply("Para solicitar una monitoria, déjanos los siguientes datos: \n**1. **Nombre y apellido. \n**2.** Código estudiantil. \n**3. **Número de WhatsApp (opcional, por si debemos comunicarnos contigo). \n**4. **Curso/materia. \n**5. **Disponibilidad horaria (días y horas) que te puedan servir. (Recuerda conocer los #⏰horarios de los monitores). .\n**6. **Descripción breve de la necesidad (ayuda en un ensayo, presentación oral). .\n**7. **Monitor que prefieres (opcional). \nEn los horarios de atención un monitor leerá tu mensaje y te confirmará si quedaste agendado. **Recuerda que debes haber sido confirmado por parte del monitor que te agende.** Este mensaje se autodestruirá en 2 minutos...").then(ms => {
         ms.delete({timeout: 120000})
       })
       .catch(); //Used for error handling
