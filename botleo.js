@@ -28,13 +28,13 @@ client.on("message", (msg) => {
       
     }
 
-    else if (msg.content.includes("llegado")) {
+    /*else if (!msg.content === "") {
       msg.reply("").then(ms => {
         ms.delete({timeout: 120000})
       })
       .catch(); //Used for error handling
       
-    }
+    }*/
  
     else if (msg.content.includes("subir")) {
       msg.reply("si te refieres a cómo subir un texto o recurso de oralidad, en el canal #📤subir-archivo encontrarás un link a un formulario de Google para hacerlo. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el canal en esos horarios significa que ya alcanzamos el tope diario que podemos revisar. Te agradecemos visitarnos mañana.").then(ms => {
