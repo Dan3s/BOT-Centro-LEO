@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const mensajeDeSemanaFinal = "Como ya finalizaron las semanas de clases, en esta última estaremos haciendo solo revisiones de textos, no citas. Sin embargo, serán pocos los textos que se podrán subir diariamente, pues depende de la disponibilidad de monitores del día. Esperamos tu comprensión. Recuerda que el Centro LEO te acompaña."
+const mensajeDeFinDeSemestre = "Hemos terminado nuestro tiempo de acompañamiento. Agradecemos tu visita. Nos vemos el otro semestre. Recuerda que el Centro LEO te acompaña."
 
 function presence(){
   client.user.setPresence({
@@ -20,7 +22,7 @@ client.on("message", (msg) => {
 
   if(msg.member.roles.cache.some(r=>["Estudiante"].includes(r.name))){
 
-    if (msg.content.includes("llegado")) {
+    /*if (msg.content.includes("llegado")) {
       msg.reply("si te refieres a por qué no te ha llegado tu texto retroalimentado, recuerda que te llegará a tu correo en horas de la tarde. A veces tenemos mucho trabajo y tardamos un poquito más :(").then(ms => {
         ms.delete({timeout: 120000})
       })
@@ -34,7 +36,7 @@ client.on("message", (msg) => {
       })
       .catch(); //Used for error handling
       
-    }*/
+    }
  
     else if (msg.content.includes("subir")) {
       msg.reply("si te refieres a cómo subir un texto o recurso de oralidad, en el canal #📤subir-archivo encontrarás un link a un formulario de Google para hacerlo. Los horarios para que puedas subirlo son de 8:30 - 11:30 a.m. Si no aparece el canal en esos horarios significa que ya alcanzamos el tope diario que podemos revisar. Te agradecemos visitarnos mañana.").then(ms => {
@@ -61,13 +63,13 @@ client.on("message", (msg) => {
     }
     else {
 
-    }
+    }*/
     
 
-   /*msg.reply("Hemos terminado nuestro tiempo de acompañamiento. Agradecemos tu visita. Nos vemos el otro semestre. Recuerda que el Centro LEO te acompaña.").then(ms => {
+   msg.reply(mensajeDeSemanaFinal).then(ms => {
     ms.delete({timeout: 120000})
   })
-  .catch();*/
+  .catch();
   }
 
 });
